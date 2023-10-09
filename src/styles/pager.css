@@ -1,0 +1,64 @@
+.pager {
+    position: relative;
+    display: flex;
+    grid-column: 3 / 5;
+    overflow: hidden;
+
+    @mixin media-m {
+        justify-content: flex-end;
+        grid-column: 7 / 9;
+    }
+    @mixin media-s {
+        grid-column: 0;
+        width: 22rem;
+    }
+
+    &__container {
+        overflow: hidden;
+        position: absolute;
+    }
+
+    &__title {
+        text-align: right;
+        display: flex;
+
+        @mixin media-s {
+            position: relative;
+            justify-content: flex-end;
+        }
+    }
+
+    &__inner-container {
+        display: flex;
+    }
+
+    &__section-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__section {
+        height: 100%;
+
+        @mixin media-m {
+            text-align: right;
+        }
+    }
+
+    &__section-title {
+        &:first-child {
+            display: none;
+
+            @mixin media-m {
+                display: inline-block;
+                margin-right: 0.5rem;
+            }
+        }
+
+        &:first-letter {
+            @mixin media-m {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

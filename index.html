@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <include src="./src/templates/_head.html"></include>
+
+        <title>Jeremie Nallet — Front-End Developer</title>
+
+        <style>
+            .preloader {
+                background-color: #070812;
+                position: fixed;
+                z-index: 110;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="preloader"></div>
+
+        <div id="layout">
+            <div class="scroll-bar">
+                <div class="scroll-bar__inner"></div>
+            </div>
+
+            <include src="./src/templates/resume.html"></include>
+            <include src="./src/templates/cursor.html"></include>
+            <include src="./src/templates/header.html"></include>
+            <include src="./src/templates/loader.html"></include>
+
+            <div id="scroller">
+                <main>
+                    <include src="./src/templates/intro.html"></include>
+                    <include src="./src/templates/about.html"></include>
+                    <include src="./src/templates/synergy.html"></include>
+                    <include src="./src/templates/projects.html"></include>
+                </main>
+
+                <include src="./src/templates/footer.html"></include>
+            </div>
+
+            <canvas class="canvas canvas__webgl r-webgl"></canvas>
+            <canvas class="canvas canvas__transition"></canvas>
+        </div>
+        <script
+            type="module"
+            src="/src/app.js"
+        ></script>
+    </body>
+</html>

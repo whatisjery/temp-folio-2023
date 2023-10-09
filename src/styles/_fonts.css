@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "abc-normal";
+    src: url("/fonts/ABCNormal-Normal.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "abc-regular";
+    src: url("/fonts/ABCNormal-Regular.ttf") format("truetype");
+    font-display: swap;
+}

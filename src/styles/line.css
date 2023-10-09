@@ -1,0 +1,13 @@
+.line {
+    height: var(--line-width);
+    background: rgb(244, 244, 244);
+    overflow: hidden;
+    position: relative;
+
+    &__progress {
+        position: absolute;
+        width: 0%;
+        height: inherit;
+        background: var(--color-mat-1);
+    }
+}

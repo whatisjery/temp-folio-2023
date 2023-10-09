@@ -1,0 +1,101 @@
+<section
+    id="project"
+    class="project-section"
+    data-section="project"
+>
+    <div class="project-section-header">
+        <div class="project-section-header__title-wrapper">
+            <h3 class="project-section-header__title text-split text-hover">projects</h3>
+        </div>
+
+        <p class="project-section-header__subtitle grid-base">
+            <span>
+                Some personal projects I've developed and designed for both enjoyment and
+                educational purposes.
+            </span>
+        </p>
+    </div>
+
+    <each loop="project in projects">
+        <div class="project grid-base">
+            <div class="project__content">
+                <div class="project__wrapper">
+                    <div>
+                        <h4 class="project__title">{{project.title}}</h4>
+                        <div class="project__info-group">
+                            <div class="line">
+                                <div class="line__progress"></div>
+                            </div>
+
+                            <div class="project__info-item u-fs-body">
+                                <p>timeframe</p>
+                                <p>{{project.timeframe}}</p>
+                            </div>
+
+                            <div class="line">
+                                <div class="line__progress"></div>
+                            </div>
+
+                            <div class="project__info-item u-fs-body">
+                                <p>tech</p>
+                                <p>{{project.tech}}</p>
+                            </div>
+
+                            <div class="line">
+                                <div class="line__progress"></div>
+                            </div>
+
+                            <div class="project__info-item u-fs-body">
+                                <p>visit</p>
+                                <a
+                                    target="_blank"
+                                    class="link"
+                                    href="{{project.link}}"
+                                    data-cursor-hover="stick"
+                                    >{{project.linkTitle}}</a
+                                >
+                            </div>
+
+                            <div class="line">
+                                <div class="line__progress"></div>
+                            </div>
+
+                            <p class="project__info-item u-fs-body">{{project.body}}</p>
+
+                            <div class="line">
+                                <div class="line__progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="project__year">&copy;{{project.year}}</h4>
+                </div>
+            </div>
+
+            <a
+                href="{{project.link}}"
+                target="_blank"
+                data-cursor-bubble='["{{project.bubbleTitle}}", "--color-mat", "--color-bg"]'
+                class="project__img-group"
+            >
+                <figure class="project__img-figure">
+                    <img
+                        width="1000"
+                        height="1000"
+                        class="project__img"
+                        src="{{project.img1}}"
+                        alt="{{project.title}}"
+                    />
+                    <img
+                        width="1000"
+                        height="1000"
+                        class="project__img"
+                        src="{{project.img2}}"
+                        alt="{{project.title}}"
+                    />
+
+                    <figcaption class="project__img-caption">First prototype</figcaption>
+                </figure>
+            </a>
+        </div>
+    </each>
+</section>

@@ -1,0 +1,43 @@
+<div
+    id="intro"
+    class="intro r-intro"
+>
+    <div class="intro__desktop">
+        <div class="intro__desktop-text">
+            <h2 class="text-split text-hover role">front end developer</h2>
+        </div>
+
+        <div class="intro__desktop-bottom">
+            <div class="intro__desktop-text">
+                <h2 class="text-split text-hover text-split">+ ui designer,</h2>
+            </div>
+
+            <div class="tag r-intro-tag intro__desktop-tags">
+                <div class="tag__container">
+                    <ul class="tag__slider">
+                        <each loop="tag in tags">
+                            <li class="tag__item">{{tag}}</li>
+                        </each>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro__mobile">
+        <h2 class="intro__mobile-text text-split">front end</h2>
+        <h2 class="intro__mobile-text text-split">developer</h2>
+        <h2 class="intro__mobile-text text-split">and ui</h2>
+        <h2 class="intro__mobile-text text-split">designer,</h2>
+
+        <div class="tag r-intro-tag intro__mobile-tags">
+            <div class="tag__container">
+                <ul class="tag__slider">
+                    <each loop="tag in tags">
+                        <li class="tag__item">{{tag}}</li>
+                    </each>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

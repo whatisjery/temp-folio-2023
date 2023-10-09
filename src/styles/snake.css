@@ -1,0 +1,57 @@
+.snake {
+    --width: 0.2rem;
+
+    right: 0;
+    left: 0;
+    bottom: 0;
+    grid-gap: 0;
+    gap: 0;
+
+    z-index: 100;
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: difference;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__grid {
+        display: grid;
+        user-select: none;
+        pointer-events: none;
+
+        background-image: repeating-linear-gradient(
+                90deg,
+                var(--color-grid-snake),
+                var(--color-grid-snake) var(--width),
+                transparent var(--width),
+                transparent calc($snake * 1px)
+            ),
+            repeating-linear-gradient(
+                180deg,
+                var(--color-grid-snake),
+                var(--color-grid-snake) var(--width),
+                transparent var(--width),
+                transparent calc($snake * 1px)
+            );
+        border: var(--width) solid var(--color-grid-snake);
+
+        background-repeat: repeat, repeat, no-repeat;
+        background-position: 0 0, 0 0, 100% 0;
+    }
+
+    &__segment {
+        background: var(--color-bg);
+    }
+
+    &__food {
+        opacity: 0;
+    }
+
+    &__score {
+        font-family: "abc-regular";
+        margin-bottom: 1rem;
+    }
+}

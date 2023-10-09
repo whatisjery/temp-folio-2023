@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "requireConfigFile": false
+    },
+
+    "rules": {
+        "no-undef": "error",
+        "no-extra-semi": "off"
+    },
+
+    "parser": "@babel/eslint-parser"
+}

@@ -1,0 +1,16 @@
+.scroll-bar {
+    position: fixed;
+    z-index: 101;
+    width: calc(100% - calc(var(--frame)));
+    left: var(--frame);
+    height: var(--frame);
+    top: 0;
+
+    &__inner {
+        transform: scaleX(0);
+        transform-origin: left;
+        height: inherit;
+        background: var(--color-accent);
+        will-change: transform;
+    }
+}

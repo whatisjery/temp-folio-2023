@@ -1,0 +1,36 @@
+.tag {
+    --timing: 0.9s var(--bezier-expo);
+    --height: 5.5rem;
+
+    display: flex;
+    user-select: none;
+
+    &__container {
+        margin-right: 1rem;
+        z-index: 100;
+        position: relative;
+        height: var(--height);
+        overflow: hidden;
+        border: 0.2rem solid var(--color-mat-2);
+        border-radius: var(--height);
+        transition: width var(--timing);
+        will-change: width;
+    }
+
+    &__slider {
+        transition: transform var(--timing);
+        will-change: transform;
+    }
+
+    &__item  {
+        height: var(--height);
+        padding: 0 2.2rem;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        white-space: nowrap;
+        padding-bottom: 0.2rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}

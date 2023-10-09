@@ -1,0 +1,25 @@
+.not-found {
+    background: var(--color-mat);
+    color: var(--color-bg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10vh;
+
+    &__title {
+        font-size: 26rem;
+        font-family: "abc-regular";
+
+        @mixin media-s {
+            font-size: 10.2rem;
+        }
+    }
+
+    &__body {
+        font-size: 2.2rem;
+        font-family: "abc-normal";
+    }
+}

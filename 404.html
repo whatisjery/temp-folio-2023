@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>error</title>
+    </head>
+
+    <body>
+        <div
+            class="vercel-404"
+            id="layout"
+        >
+            <include src="./src/templates/cursor.html"></include>
+
+            <div class="not-found">
+                <h1 class="not-found__title text-split text-hover">ERROR 404</h1>
+
+                <a
+                    href="/"
+                    data-cursor-hover="stick"
+                    class="not-found__body home-link link"
+                >
+                    Something went wrong &mdash; Click here to reload.
+                </a>
+            </div>
+        </div>
+
+        <script
+            type="module"
+            src="/src/app.js"
+        ></script>
+    </body>
+</html>

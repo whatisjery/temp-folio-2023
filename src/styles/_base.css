@@ -1,0 +1,64 @@
+@import "./_fonts.css";
+@import "./_vars.css";
+@import "./_reset.css";
+@import "./_utils.css";
+@import "./_keyframes.css";
+@import "./intro.css";
+@import "./about.css";
+@import "./project.css";
+@import "./footer.css";
+@import "./loader.css";
+@import "./header.css";
+@import "./synergy.css";
+@import "./grid.css";
+@import "./cursor.css";
+@import "./ribbon.css";
+@import "./tags.css";
+@import "./snake.css";
+@import "./line.css";
+@import "./accordion.css";
+@import "./resume.css";
+@import "./canvas.css";
+@import "./scrollBar.css";
+@import "./textSplit.css";
+@import "./not-found.css";
+@import "./pager.css";
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "abc-normal", sans-serif;
+    color: var(--color-mat);
+    margin: auto;
+}
+
+#layout {
+    opacity: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-bg);
+    color: var(--color-font);
+
+    &:after {
+        content: "";
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        border-width: var(--frame);
+        border-color: var(--color-mat);
+        border-style: solid;
+        pointer-events: none;
+    }
+}
+
+#scroller {
+    will-change: transform;
+    padding-left: var(--page-margin);
+    width: calc(100% - var(--page-margin));
+}

@@ -1,0 +1,88 @@
+.accordion {
+    width: 100%;
+    height: 110rem;
+
+    @mixin media-s {
+        height: 85rem;
+    }
+
+    &__box {
+        cursor: pointer;
+        position: relative;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover .accordion__head {
+                opacity: 1;
+            }
+        }
+
+        &.open .accordion__head {
+            opacity: 1;
+        }
+
+        &.open .accordion__arrow {
+            transform: rotate(0deg);
+        }
+    }
+
+    &__title {
+        font-size: 3.8rem;
+        font-family: "abc-regular";
+        user-select: none;
+    }
+
+    &__head {
+        width: 100%;
+        padding: 5rem 0;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        opacity: 0.4;
+        transition: 0.5s opacity var(--bezier-expo);
+    }
+
+    &__arrow {
+        font-size: 4rem;
+        transition: transform 0.3s var(--bezier-expo);
+        transform: rotate(-50deg);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s var(--bezier-expo);
+        position: relative;
+        bottom: 1.8rem;
+    }
+
+    &__body {
+        margin-bottom: 7.5rem;
+        display: inline;
+        hyphens: auto;
+        cursor: text;
+
+        > a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @mixin media-s {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__tags {
+        margin: -3.5rem 0 4.5rem 0;
+
+        @mixin media-s {
+            width: 100%;
+        }
+    }
+}

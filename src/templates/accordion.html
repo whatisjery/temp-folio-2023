@@ -1,0 +1,40 @@
+<div class="accordion">
+    <each loop="accordion in accordions">
+        <div
+            data-cursor-hover="follow"
+            class="accordion__box"
+        >
+            <div class="accordion__head">
+                <h3 class="accordion__title">{{accordion.title}}</h3>
+                <button
+                    aria-label="accordion-button"
+                    class="accordion__arrow"
+                >
+                    &leftarrow;
+                </button>
+            </div>
+
+            <div class="accordion__content">
+                <p class="accordion__body u-fs-body u-w-body">{{accordion.body}}</p>
+
+                <if condition="accordion.tags">
+                    <div class="accordion__tags tag">
+                        <each loop="tagGroup in accordion.tags">
+                            <div class="tag__container">
+                                <ul class="tag__slider">
+                                    <each loop="tag in tagGroup">
+                                        <li class="tag__item">{{tag}}</li>
+                                    </each>
+                                </ul>
+                            </div>
+                        </each>
+                    </div>
+                </if>
+            </div>
+
+            <div class="accordion__separator line">
+                <div class="line__progress"></div>
+            </div>
+        </div>
+    </each>
+</div>

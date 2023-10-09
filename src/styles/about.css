@@ -1,0 +1,60 @@
+.about {
+    &__intro {
+        margin-bottom: 5rem;
+    }
+
+    &__intro,
+    &__accordion {
+        grid-column: 5 / 9;
+
+        @mixin media-m {
+            grid-column: 4 / 9;
+            font-family: "abc-normal";
+        }
+
+        @mixin media-s {
+            grid-column: 1 / 9;
+            margin-bottom: 12rem;
+        }
+    }
+
+    &__side-title {
+        grid-column: 1 / 4;
+        display: inline-flex;
+        position: relative;
+        top: 1rem;
+
+        @mixin media-s {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 5.6rem;
+        line-height: 1.2em;
+        font-family: "abc-regular";
+        width: fit-content;
+        margin-bottom: 4.5rem;
+
+        @mixin media-m {
+            font-size: 5.3rem;
+        }
+    }
+
+    &__body {
+        margin-bottom: 5rem;
+        hyphens: auto;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @mixin media-s {
+            hyphens: none;
+            width: 100%;
+
+            &:last-child {
+                text-indent: 0;
+            }
+        }
+    }
+}

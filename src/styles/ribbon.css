@@ -1,0 +1,38 @@
+.ribbon {
+    display: flex;
+    white-space: nowrap;
+    z-index: 1;
+    font-family: "abc-regular";
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    top: 10vh;
+    font-size: 31vh;
+    will-change: transform;
+    user-select: none;
+    position: relative;
+    pointer-events: none;
+
+    @mixin media-l {
+        font-size: 28vh;
+    }
+
+    @mixin media-m {
+        font-size: 24vh;
+        position: relative;
+    }
+
+    @mixin media-s {
+        top: 5vh;
+        font-size: 20vh;
+    }
+
+    &__content {
+        padding-right: 2vw;
+        letter-spacing: 0;
+    }
+
+    &__text-item {
+        letter-spacing: -0.03em;
+    }
+}

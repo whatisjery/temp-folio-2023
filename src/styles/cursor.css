@@ -1,0 +1,59 @@
+.cursor {
+    pointer-events: none;
+    user-select: none;
+
+    &__circle-path {
+        fill: none;
+        stroke-width: 14;
+        stroke: var(--color-accent);
+        width: var(--cursor-size);
+        height: var(--cursor-size);
+        will-change: transform;
+    }
+
+    &__dot-path {
+        fill: var(--color-accent);
+        will-change: transform;
+    }
+
+    &__bubble {
+        --size: 190px;
+        position: fixed;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--size);
+        height: var(--size);
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 102;
+        will-change: transform;
+    }
+
+    &__text-bubble {
+        font-size: 2.6rem;
+        font-family: "abc-normal";
+        position: absolute;
+    }
+
+    &__dot,
+    &__circle {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        user-select: none;
+        transform-origin: center;
+        will-change: transform;
+    }
+}
+
+[data-cursor-hover="stick"] {
+    &:hover {
+        color: var(--color-accent);
+        cursor: pointer;
+    }
+}

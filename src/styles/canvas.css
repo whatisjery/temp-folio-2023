@@ -1,0 +1,38 @@
+.canvas {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    user-select: none;
+    z-index: 100;
+
+    &__webgl {
+        pointer-events: none;
+
+        @mixin media-s {
+            display: none;
+        }
+    }
+
+    &__transition {
+        pointer-events: none;
+        z-index: 101;
+    }
+
+    &__ball {
+        z-index: 103;
+    }
+
+    &__draw,
+    &__ball {
+        pointer-events: unset;
+        transition: 0.5s;
+        top: 0;
+        position: absolute;
+        top: calc(50% - 2.5px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}

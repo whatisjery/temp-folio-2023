@@ -1,0 +1,50 @@
+*:where(:not(html, canvas, img, svg):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--color-text-highlight);
+}
+
+a,
+button {
+    cursor: revert;
+}
+
+ul,
+menu {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    user-select: none;
+}
+
+canvas {
+    pointer-events: none;
+}
+
+:where([hidden]) {
+    display: none;
+}
+
+button:active {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}

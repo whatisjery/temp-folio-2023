@@ -1,0 +1,92 @@
+.synergy {
+    --overlap: 23rem;
+    user-select: none;
+    position: relative;
+    margin-bottom: 35rem;
+    border-bottom: 1px solid var(--color-mat-2);
+
+    @mixin media-l {
+        --overlap: 22rem;
+    }
+
+    @mixin media-m {
+        --overlap: 18rem;
+    }
+
+    @mixin media-s {
+        margin-bottom: 20rem;
+    }
+
+    &__circle-group {
+        grid-column: 1 / 9;
+        display: flex;
+        width: calc(100% + var(--grid-gap));
+        overflow: hidden;
+        padding-bottom: 8rem;
+
+        @mixin media-m {
+            grid-column: 1 / 9;
+        }
+
+        @mixin media-s {
+            --overlap: 0;
+            flex-direction: column;
+        }
+    }
+
+    &__circle-container {
+        width: calc(calc(100% / 3) + var(--grid-gap));
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: relative;
+        border: 0;
+        overflow: hidden;
+
+        @mixin media-l {
+            width: calc(calc(100% / 3) + var(--grid-gap));
+        }
+
+        @mixin media-m {
+            width: calc(100% / 2);
+        }
+
+        @mixin media-s {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:nth-child(2) {
+            margin-left: calc(var(--overlap) * -1);
+            border: 0;
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            left: var(--grid-gap);
+
+            @mixin media-m {
+                left: unset;
+                margin-left: calc(var(--overlap) * -1);
+            }
+        }
+    }
+
+    &__circle {
+        stroke: var(--color-mat-2);
+        stroke-width: 0.7px;
+        will-change: transform;
+    }
+
+    &__circle-name {
+        font-size: 2.45rem;
+        position: absolute;
+        display: flex;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

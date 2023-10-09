@@ -1,0 +1,71 @@
+:root {
+    --font-size: 0.44vw;
+    --frame: 6.5px;
+
+    --color-bg: rgb(254, 254, 254);
+    --color-body: rgb(43, 45, 49);
+    --color-mat: rgb(7, 8, 17);
+    --color-mat-1: rgb(189, 189, 189);
+    --color-mat-2: rgb(143, 145, 147);
+    --color-grid: rgba(103, 107, 132, 0.028);
+    --color-grid-snake: rgba(158, 161, 165, 0.073);
+    --color-font: rgb(9, 12, 25);
+    --color-accent: rgb(246, 87, 66);
+    --color-text-highlight: rgb(233, 233, 233);
+
+    --cursor-size: 58px;
+    --grid-gap: 2.5rem;
+    --header-height: 7.2rem;
+    --page-margin: 12.9rem;
+    --bezier-expo: cubic-bezier(0.59, 0, 0.16, 1);
+    --line-width: 1px;
+    --mobile-vh: calc(var(--vh, 1vh) * 100);
+}
+
+@define-mixin media-xl {
+    @media (max-width: $(xl)px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin media-l {
+    @media (max-width: $(l)px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin media-m {
+    @media (max-width: $(m)px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin media-s {
+    @media (max-width: $(s)px) {
+        @mixin-content;
+    }
+}
+
+@mixin media-l {
+    :root {
+        --font-size: 0.48vw;
+    }
+}
+
+@mixin media-m {
+    :root {
+        --frame: 4.5px;
+        --font-size: 0.7vw;
+        --page-margin: 3rem;
+        --color-grid: transparent;
+    }
+}
+
+@mixin media-s {
+    :root {
+        --header-height: 6rem;
+        --font-size: 1.48vw;
+        --grid-gap: 0rem;
+        --page-margin: 1.8rem;
+    }
+}

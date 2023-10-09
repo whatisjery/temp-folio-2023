@@ -1,0 +1,28 @@
+.text-split {
+    overflow: hidden;
+
+    &__content {
+        position: relative;
+        display: inline-flex;
+        overflow: hidden;
+        will-change: transform;
+    }
+
+    &__letter {
+        white-space: pre;
+        display: inline-block;
+        will-change: transform;
+
+        &.clone {
+            position: absolute;
+        }
+
+        &.beforeend {
+            right: -100%;
+        }
+
+        &.afterbegin {
+            right: 100%;
+        }
+    }
+}
